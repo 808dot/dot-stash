@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.hero .content{
+    width: 80%;
+    height: 80%;
+    background-color: white;
+
+    animation: blobEffect 15s ease-in-out infinite;
+    transition: all 1s easy-in-out;
+
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 8px 8px white inset;
+}
+
+@keyframes blobEffect{
+    0%{
+        border-radius: 47% 53% 53% 47% / 30% 62% 38% 70% ;
+    }
+    25%{
+        border-radius: 27% 63% 13% 87% / 50% 22% 48% 10% ;
+    }
+    50%{
+        border-radius: 17% 23% 83% 37% / 38% 22% 88% 40% ;
+    }
+    75%{
+        border-radius: 57% 33% 23% 87% / 98% 42% 48% 70% ;
+    }
+    100%{
+        border-radius: 47% 53% 53% 47% / 30% 62% 38% 70% ;
+
+    }
+}
